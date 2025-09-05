@@ -1,0 +1,134 @@
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 0rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container .logo {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.logo-container .logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.2));
+}
+
+.about {
+  flex: 1;
+  padding: 2rem;
+  background: rgba(198, 124, 78, 0.08);
+  border-radius: 10px;
+  border-left: 4px solid #c67c4e;
+}
+.about :hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.about h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #4a2c2a;
+  margin-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5a4a42;
+  margin-bottom: 1.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.about p:first-of-type {
+  font-weight: 500;
+  color: #6b4f4b;
+}
+
+@media (max-width: 968px) {
+  .main-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .logo-container .logo {
+    max-width: 280px;
+  }
+
+  .about {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .about h1 {
+    font-size: 2.3rem;
+  }
+
+  .about h1:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .logo-container .logo {
+    max-width: 220px;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.logo-container .logo {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.about {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  position: relative;
+}
