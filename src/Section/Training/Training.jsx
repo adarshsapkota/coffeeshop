@@ -1,5 +1,5 @@
 import React from "react";
-import Barista from "../../assets/Barista.png";
+import barista from "../../assets/barista.png";
 
 import "./Training.css";
 
@@ -26,7 +26,7 @@ function Training() {
         </p>
       </div>
       <div className="barista-img">
-        <img src={Barista} alt="barista in training" className="photo" />
+        <img src={barista} alt="barista in training" className="photo" />
       </div>
     </section>
   );
