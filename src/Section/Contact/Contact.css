@@ -1,0 +1,18 @@
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 1px solid rgba(198, 124, 78, 0.2);
+}
+
+.contact-section h2 {
+  margin: 0 0 0.8rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #4a2c2a;
+}
+
+.contact-section p {
+  margin: 0.35rem 0;
+  color: #5a4a42;
+}

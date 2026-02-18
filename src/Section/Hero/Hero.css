@@ -1,12 +1,11 @@
-.main-container {
+﻿.hero-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4rem;
   padding: 0rem 2rem;
   max-width: 1200px;
-  margin: 0 auto;
-
+  margin-top: 20px;
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -17,15 +16,14 @@
   align-items: center;
 }
 
-.logo-container .logo {
-  width: 100%;
-  max-width: 350px;
+.logo-container .hero-logo-image {
+  width: clamp(180px, 35vw, 350px);
   height: auto;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.logo-container .logo:hover {
+.logo-container .hero-logo-image:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.2));
 }
@@ -37,9 +35,7 @@
   border-radius: 10px;
   border-left: 4px solid #c67c4e;
 }
-.about :hover {
-  transform: translateY(-8px) scale(1.02);
-}
+
 
 .about h1 {
   font-size: 2.8rem;
@@ -65,14 +61,14 @@
 }
 
 @media (max-width: 968px) {
-  .main-container {
+  .hero-container {
     flex-direction: column;
     gap: 2rem;
     padding: 2rem 1.5rem;
   }
 
-  .logo-container .logo {
-    max-width: 280px;
+  .logo-container .hero-logo-image {
+    width: clamp(180px, 42vw, 280px);
   }
 
   .about {
@@ -91,12 +87,12 @@
 }
 
 @media (max-width: 480px) {
-  .main-container {
+  .hero-container {
     padding: 1.5rem 1rem;
   }
 
-  .logo-container .logo {
-    max-width: 220px;
+  .logo-container .hero-logo-image {
+    width: clamp(150px, 55vw, 220px);
   }
 
   .about h1 {
@@ -120,11 +116,11 @@
   }
 }
 
-.main-container {
+.hero-container {
   animation: fadeInUp 0.8s ease-out;
 }
 
-.logo-container .logo {
+.logo-container .hero-logo-image {
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -132,3 +128,4 @@
   animation: fadeInUp 0.8s ease-out 0.4s both;
   position: relative;
 }
+

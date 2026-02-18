@@ -1,5 +1,16 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import "./Navbar.css";
+import logo from "../assets/logo.png";
+
+
+const NAV_ITEMS = [
+  { id: "Hero", label: "Home" },
+  { id: "Training", label: "Training" },
+  { id: "Review", label: "Reviews" },
+  { id: "Gallery", label: "Gallery" },
+  { id: "Location", label: "Location" },
+  { id: "Contact", label: "Contact" },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,17 +33,23 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
+
         <div className="nav-logo">
-          <span>Coffee Dhara</span>
+        <img src={logo} alt="Coffee Dhara Logo" className="nav-logo-image" />
         </div>
 
         <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
-          <li onClick={() => scrollToSection("Hero")}>Home</li>
-          <li onClick={() => scrollToSection("Training")}>Training</li>
-          <li onClick={() => scrollToSection("Review")}>Reviews</li>
-          <li onClick={() => scrollToSection("Gallery")}>Gallery</li>
-          <li onClick={() => scrollToSection("Location")}>Location</li>
-          <li onClick={() => scrollToSection("Contact")}>Contact</li>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.id}>
+              <button
+                type="button"
+                className="nav-link-btn"
+                onClick={() => scrollToSection(item.id)}
+              >
+                {item.label}
+              </button>
+            </li>
+          ))}
         </ul>
 
         <div className="nav-connect" onClick={() => scrollToSection("Contact")}>
@@ -55,3 +72,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

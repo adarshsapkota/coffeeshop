@@ -1,0 +1,12 @@
+.review-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.review-section h2 {
+  margin: 0 0 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #4a2c2a;
+}

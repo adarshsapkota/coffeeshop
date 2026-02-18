@@ -1,19 +1,19 @@
-import React from "react";
+﻿import React from "react";
 import logo from "../../assets/logo.png";
 import "./Hero.css";
 
 function Hero() {
   return (
-    <div className="main-container">
+    <section id="Hero" className="hero-container">
       <div className="logo-container">
-        <img src={logo} alt="Coffee Dhara Logo" className="logo" />
+        <img src={logo} alt="Coffee Dhara Logo" className="hero-logo-image" />
       </div>
       <div className="about">
         <h1>Welcome to Coffee Dhara</h1>
         <p>
           Founded in 2022, Coffee Dhara was born with a simple dream: to create
           a space where people can enjoy truly great coffee while also learning
-          the art behind every cup. We are more than just a coffee shop – we are
+          the art behind every cup. We are more than just a coffee shop - we are
           also a barista training school, dedicated to inspiring and educating
           the next generation of coffee professionals.
         </p>
@@ -25,8 +25,9 @@ function Hero() {
           techniques, we aim to deliver consistency and excellence in every sip.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 
 export default Hero;
+
